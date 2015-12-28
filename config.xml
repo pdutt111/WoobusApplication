@@ -33,6 +33,7 @@
     <gap:plugin name="org.apache.cordova.globalization" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
     <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="cordova-plugin-screen-orientation" source="npm" version="1.4.0" />
     <gap:plugin name="org.apache.cordova.cordova-plugin-network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
@@ -111,4 +112,5 @@
     <allow-navigation href="http://*/*" />
     <access origin="*"/>
     <access origin="http://dev.cachefi.com"/>
+    <access origin="http://192.168.0.105:1337"/>
 </widget>
