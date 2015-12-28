@@ -2,6 +2,11 @@
 var adminEmail = 'rashmi.srivastava@vibetechindia.com';
 var _webSiteName = "WooBus";
 var _apiBaseUrl = "http://dev.cachefi.com/api/v1";
+var _localUrl= "http://192.168.1.105/api/v1"
+//var _localUrl= "http://localhost:1337/api/v1";
+//var _localNginxUrl= "http://localhost:2000/";
+var _localNginxUrl= "http://192.168.1.105:2000"
+
 if(localStorage._apiBaseUrl){
     _apiBaseUrl=localStorage._apiBaseUrl;
 }
@@ -281,7 +286,14 @@ function validateAlpha(ctrlName) {
         return false;
     }
 }
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady()
+{
+//        var so = cordova.plugins.screenorientation;
+//        so.setOrientation(so.Orientation.LANDSCAPE);
+    screen.lockOrientation('portrait');
 
+}
 
 
 

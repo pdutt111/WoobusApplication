@@ -15,5 +15,21 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-screen-orientation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-screen-orientation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.moust.cordova.videoplayer": {
+        "source": {
+            "type": "registry",
+            "id": "com.moust.cordova.videoplayer"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

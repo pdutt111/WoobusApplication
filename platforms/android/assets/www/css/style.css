@@ -17,8 +17,8 @@ body {
 	color: #666;
 	background-color:#e52f3c;
 	font-family: 'Roboto-Thin';
-	font-size:16px;
-	font-weight:normal;
+	font-size:18px;
+	font-weight:bold;
 }
 /*Sidebar Menu*/
 .gn-menu .fa {
@@ -1106,4 +1106,10 @@ clear: both;
     position: absolute;
     top: 13%;
     left: 3%;
+}
+.center {
+	margin: auto;
+	width: 60%;
+	border: 3px solid #73AD21;
+	padding: 10px;
 }
