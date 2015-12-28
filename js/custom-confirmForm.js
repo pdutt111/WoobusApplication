@@ -32,7 +32,7 @@ function confirmPin(){
 function next_page(){
     $.ajax({
         type: 'GET',
-        url: _apiBaseUrl + '/api/v1/users/state',
+        url: _apiBaseUrl + '/users/state',
         contentType: 'application/json',
         dataType: "json",
         success: function(data){
