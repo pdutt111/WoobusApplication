@@ -475,6 +475,7 @@ setInterval(    $.ajax({
         console.log(_apiBaseUrl);
         if(localStorage.getItem('token')){
             console.log(localStorage.getItem('token'));
+            console.log()
             if(data.in_bus){
                 $(location).attr('href','myjourney.html');
             }

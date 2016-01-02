@@ -7,10 +7,10 @@
         contentType: 'application/json',
         dataType: "json",
         success: function(data){
-            console.log(data);
+            //console.log(data);
             localStorage._apiBaseUrl=_localUrl;
             _apiBaseUrl=_localUrl;
-            console.log(_apiBaseUrl);
+            //console.log(_apiBaseUrl);
             if(localStorage.getItem('token')){
                 console.log(localStorage.getItem('token'));
                 if(data.in_bus){

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <link href="css/style.css">
+
+</head>
+<body bgcolor="#e52f3c">
+<div class="center" style="width: 100%;">
+        <video style="width:100%;" controls="controls" autoplay id="btnPlayVideo" autoplay class="video_align">
+            <source type="video/mp4" id="vid" />
+        </video>
+</div>
+<script>
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady()
+    {
+//        var so = cordova.plugins.screenorientation;
+//        so.setOrientation(so.Orientation.LANDSCAPE);
+        screen.unlockOrientation();
+
+    }
+    $(document).ready(function () {
+        jQuery(document).on('webkitfullscreenchange', function(e) {
+            if(!e.currentTarget.webkitIsFullScreen) {
+                screen.unlockOrientation();
+            }
+        });
+        $("#btnPlayVideo").attr({
+            "src": sessionStorage.videoUrl,
+            "autoplay": true
+        });
+        $("#btnPlayVideo").ready(function(){
+//            this.enterFullScreen(); // enter full screen by default -stooch
+            this.play(); // force autoplay -stooch
+            var elem = this;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            }
+        });
+
+    });
+</script>
+<!-- Core JavaScript Files -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/stellar.js"></script>
+<!-- Custom Theme JavaScript -->
+
+<!-- <script type="text/javascript" charset="utf-8" src="phonegap.0.9.5.js"></script>-->
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<!--<script src="js/common.js"></script>-->
+<!--<script src="js/custom-entertainment.js"></script>-->
+</body>
+</html>

@@ -953,6 +953,7 @@ input:-moz-placeholder { color:#fff !important; }
 .fourth,.five {border-bottom:none !important}
 .inner_button p{font-size:13px; text-align:center; line-height:1;}
 .border-r { border-right: 1px solid #e52f3c; border-bottom: 1px solid #e52f3c; text-align: center; padding: 5px 0px;}
+.borderb { border-bottom: 1px solid #e52f3c; text-align: center; padding: 5px 0px;}
 .boredr-b { border-bottom:none;}
 .remo { border-right:none;}
 .bu ul {padding:0px;}
