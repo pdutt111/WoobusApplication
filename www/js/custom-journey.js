@@ -40,7 +40,8 @@ function dataParserRoute(data) {
     $("#marker").css({'left':position_marker + 5 + '%'});
 
     console.log(data.current_time_taken);
-    var time_taken = (data.current_time_taken/(1000*60*60)).toFixed(2)+" Hrs";
+    var minutes=(data.current_time_taken/(1000*60)).toFixed(0);
+    var time_taken = Math.floor(minutes/60)+"."+(minutes%60)+" Hrs";
     $("#time").html(time_taken);
 
     console.log(journeyData);
