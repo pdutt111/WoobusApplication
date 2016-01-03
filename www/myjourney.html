@@ -39,8 +39,11 @@
 
 <main>
     <div class="container">
+        <!-- Space -->
         <div class="row"><span> </span></div>
+        <!-- Current Journey Box -->
         <div class="card-panel woobus" id="journey-box">
+            <!-- From To -->
             <div class="row">
                 <div class="col s6 white-text left-align">
                     <p class="from journey">From</p>
@@ -57,10 +60,15 @@
                     </p>
                 </div>
             </div>
-            <div>
-                <div id="stops" class="col s11" id="marker">
-                    <a href="#" class="bin tooltipped" data-position="top" data-delay="50" data-tooltip="Your Position"><i class="material-icons" id="marker">person_pin</i></a>
+            <!-- Journey Progress -->
+            <div class="row">
+                <div id="stops" class="col s12">
+                    <a href="#" class="bin tooltipped" data-position="top" data-delay="50" data-tooltip="Your Position">
+                        <i id="marker" class="material-icons">person_pin</i>
+                    </a>
                 </div>
+            </div>
+            <div class="row">
                 <div class="strip woobus row center-block col s12">
                     <ul class="center">
                         <li></li>
@@ -77,11 +85,13 @@
                     </ul>
                 </div>
             </div>
+            <!-- Journey Details -->
             <div class="row">
                 <div class="col s6 journey"><span class="distance_home distance_km white-text" id="distance"></span></div>
                 <div class="col s6 journey"><span class="distance_home distance_hr right white-text" id="time"></span></div>
             </div>
         </div>
+        <!-- Options -->
         <div class="row">
             <div class="col s4">
                 <a href="entertainment.html"> <div class="center promo">
@@ -90,7 +100,7 @@
                 </div> </a>
             </div>
             <div class="col s4 promo-journey">
-                <a class="modal-trigger" href="#modal1" data-target="modal1"> <div class="center promo">
+                <a class="modal-trigger" href="#modal2" data-target="modal1"> <div class="center promo">
                     <i class="material-icons woobus-text md-48">work</i>
                     <p class="promo-caption woobus-text">Accessories</p>
                 </div> </a>
@@ -106,7 +116,7 @@
     </div>
 
 
-    <!-- Modal Structure -->
+    <!-- Accessories Modal Structure -->
     <div id="modal1" class="modal modal-fixed-footer">
         <div class="modal-content">
             <h4>Accessories</h4>
@@ -133,6 +143,41 @@
                 Please contact the conductor to avail these accessories</div>
         </div>
     </div>
+
+    <!-- Scheduled Stops Modal Structure -->
+    <div id="modal2" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <button type="button" class="close modal-close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 id="stop_title" class="modal-title"></h4>
+            </div>
+            <div class="row">
+                <img id="stop_image" src="images/mall.jpg">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Restaurants</td>
+                            <td id="stop_restaurants"></td>
+                        </tr>
+                        <tr>
+                            <td>Facilities</td>
+                            <td id="stop_facilities"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary">Request to Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
     <!-- Script files -->
@@ -145,12 +190,8 @@
     <script src="js/common.js"></script>
     <script src="js/custom-journey.js"></script>
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-
+        //Initialising modals
         $(document).ready(function(){
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
             $('.modal-trigger').leanModal();
         });
     </script>
