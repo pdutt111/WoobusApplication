@@ -17,8 +17,8 @@ body {
 	color: #666;
 	background-color:#e52f3c;
 	font-family: 'Roboto-Thin';
-	font-size:16px;
-	font-weight:normal;
+	font-size:18px;
+	font-weight:bold;
 }
 /*Sidebar Menu*/
 .gn-menu .fa {
@@ -953,6 +953,7 @@ input:-moz-placeholder { color:#fff !important; }
 .fourth,.five {border-bottom:none !important}
 .inner_button p{font-size:13px; text-align:center; line-height:1;}
 .border-r { border-right: 1px solid #e52f3c; border-bottom: 1px solid #e52f3c; text-align: center; padding: 5px 0px;}
+.borderb { border-bottom: 1px solid #e52f3c; text-align: center; padding: 5px 0px;}
 .boredr-b { border-bottom:none;}
 .remo { border-right:none;}
 .bu ul {padding:0px;}
@@ -1106,4 +1107,25 @@ clear: both;
     position: absolute;
     top: 13%;
     left: 3%;
+}
+.center {
+	height:100%;
+	width:100%;
+	text-align: center;
+	margin: auto;
+}
+.video_align{
+	width:100%;
+	position: relative;
+	top: 50%;
+}
+.no-wifi {
+	padding: 50px;
+	color: #fefefe;
+	display: block;
+	margin: 50% 30px;
+	background: #843534;
+	text-align: center;
+	border-radius: 10px;
+	border-color: #101010;
 }

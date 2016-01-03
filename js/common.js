@@ -5,7 +5,7 @@ var _apiBaseUrl = "http://dev.cachefi.com/api/v1";
 //var _localUrl= "http://192.168.1.105/api/v1"
 var _localUrl= "http://localhost:1337/api/v1";
 //var _localNginxUrl= "http://localhost:2000/";
-var _localNginxUrl= "http://192.168.1.105:2000"
+var _localNginxUrl= "http://192.168.1.105:2000/local/"
 
 if(localStorage._apiBaseUrl){
     _apiBaseUrl=localStorage._apiBaseUrl;

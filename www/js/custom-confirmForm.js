@@ -1,12 +1,12 @@
 /**
  * Created by pariskshitdutt on 17/10/15.
  */
-$("#btnPinConfirm").click(function () {
-    if (ValidateForm("txtPinNumber", "pin number") && minLength("txtPinNumber", 5, "Please enter valid pin number") && IsNumber("txtPinNumber", 5, "Please enter valid phone number")) {
-        $(this).html("please wait...");
-        confirmPin(localStorage.pin);
-    }
-});
+confirmPin(localStorage.pin);
+//$("#btnPinConfirm").click(function () {
+//    if (ValidateForm("txtPinNumber", "pin number") && minLength("txtPinNumber", 5, "Please enter valid pin number") && IsNumber("txtPinNumber", 5, "Please enter valid phone number")) {
+//        $(this).html("please wait...");
+//    }
+//});
 $("#txtPinNumber").val(JSON.parse(localStorage.userData).pin);
 
 function confirmPin(){
@@ -32,7 +32,7 @@ function confirmPin(){
 function next_page(){
     $.ajax({
         type: 'GET',
-        url: _apiBaseUrl + '/api/v1/users/state',
+        url: _apiBaseUrl + '/users/state',
         contentType: 'application/json',
         dataType: "json",
         success: function(data){
@@ -40,7 +40,6 @@ function next_page(){
             if(localStorage.getItem('token')){
                 console.log(localStorage.getItem('token'));
                 if(data.in_bus){
-                    console.log("in bus");
                     $(location).attr('href','myjourney.html');
                 }else{
                     $(location).attr('href','makeabooking.html');

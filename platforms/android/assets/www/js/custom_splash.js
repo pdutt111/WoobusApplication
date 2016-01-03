@@ -7,14 +7,13 @@
         contentType: 'application/json',
         dataType: "json",
         success: function(data){
-            console.log(data);
+            //console.log(data);
             localStorage._apiBaseUrl=_localUrl;
             _apiBaseUrl=_localUrl;
-            console.log(_apiBaseUrl);
+            //console.log(_apiBaseUrl);
             if(localStorage.getItem('token')){
                 console.log(localStorage.getItem('token'));
                 if(data.in_bus){
-                    console.log("in bus");
                     $(location).attr('href','myjourney.html');
                 }else{
                     $(location).attr('href','makeabooking.html');
@@ -34,6 +33,6 @@
                 $(location).attr('href','registration.html');
             }
         },
-        timeout: 5000 // sets timeout to 3 seconds
+        timeout: 3000 // sets timeout to 3 seconds
 
     });

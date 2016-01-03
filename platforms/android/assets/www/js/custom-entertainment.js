@@ -29,25 +29,27 @@ function GetAllVideo(content) {
     $("#dvMovieList").html("");
     var selectMovie = "";
     for(var i=0;i<content.movies.length;i++){
-        selectMovie=selectMovie+'<a class="select-thumbnail-link" data-val="'+content.movies[i].path+'"><span style="white-space: nowrap;overflow: hidden; margin-left: 2px;margin-right: 2px;">'+content.movies[i].name+'</span><br>'+
-            '<img src="'+content.movies[i].pic+'" style="width:100%;" data-val="'+content.movies[i].path+'" alt="'+content.movies[i].name+'" ' +
-            'onerror="this.src=\'images/movie.jpg\'" style="max-width: 100%;" /></a><br>';
+        selectMovie = selectMovie +  '<div class="card z-depth-2"> <div class="card-image"> <img src="' + content.movies[i].pic + '" onerror="this.src=\'images/movie.jpg\'" />' +
+            '<span class="card-title">' + content.movies[i].name +'</span> </div><div class="card-action white-text woobus">' +
+            '<a href="#" class="white-text select-thumbnail-link" data-val="' + content.movies[i].path + '" data-name="' + content.movies[i].name +
+            '"><i class="material-icons md-18 prefix">play_circle_filled</i> Play Movie</a></div></div>'
     }
     $("#dvMovieList").append(selectMovie);
 }
 
 $(document).on('click', '.select-thumbnail-link', function () {
-    aud.pause();
     //var videoid = this.id;
     //videoid = videoid.replace('thumbvideo_', '');
 
-    PlayVideo(this.getAttribute("data-val"));
+    PlayVideo([this.getAttribute("data-val"), this.getAttribute("data-name")]);
 });
 
 function PlayVideo(path) {
 
-    var videoFile =_localNginxUrl+path;
-    sessionStorage.videoUrl=videoFile;
+    var videoFile =_localNginxUrl + path[0];
+    var videoName = path[1];
+    sessionStorage.videoUrl = videoFile;
+    sessionStorage.videoName = videoName;
     //
     //$("#btnPlayVideo").attr({
     //    "src": videoFile,
@@ -62,7 +64,8 @@ function PlayVideo(path) {
     //} else if (elem.webkitRequestFullscreen) {
     //    elem.webkitRequestFullscreen();
     //}
-                        $(location).attr('href','player.html');
+
+    $(location).attr('href','player.html');
 
     //screen.lockOrientation('landscape');
     //so.setOrientation(so.Orientation.LANDSCAPE);

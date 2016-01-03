@@ -29,7 +29,7 @@ function GetAllVideo(content) {
     $("#dvMovieList").html("");
     var selectMovie = "";
     for(var i=0;i<content.movies.length;i++){
-        selectMovie = selectMovie +  '<div class="card z-depth-2"> <div class="card-image"> <img src="' + content.movies[i].pic + '" onerror="this.src=\'images/movie.jpg\'" />' +
+        selectMovie = selectMovie +  '<div class="card z-depth-2"> <div class="card-image"> <img src="' + content.movies[i].pic + '" onerror="this.src=\'../images/movie.jpg\'" />' +
             '<span class="card-title">' + content.movies[i].name +'</span> </div><div class="card-action white-text woobus">' +
             '<a href="#" class="white-text select-thumbnail-link" data-val="' + content.movies[i].path + '" data-name="' + content.movies[i].name +
             '"><i class="material-icons md-18 prefix">play_circle_filled</i> Play Movie</a></div></div>'
@@ -38,7 +38,6 @@ function GetAllVideo(content) {
 }
 
 $(document).on('click', '.select-thumbnail-link', function () {
-    aud.pause();
     //var videoid = this.id;
     //videoid = videoid.replace('thumbvideo_', '');
 

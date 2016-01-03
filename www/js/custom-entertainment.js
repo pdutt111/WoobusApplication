@@ -1,6 +1,5 @@
 $(document).ready(function () {
     EntertainmentDetails();
-    GetAllVideo();
 });
 
 function GetAllAudio() {
@@ -25,45 +24,64 @@ function GetAllAudio() {
     }
 }
 
-function GetAllVideo() {
+function GetAllVideo(content) {
+    console.log(content);
     $("#dvMovieList").html("");
-
-    var selectMovie = '<div class="item active">' +
-         '<div class="row-fluid"><div class="col-xs-3">' +
-         '<a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 1 + '">' +
-         '<img src="images/m1.jpg" alt="Image" style="max-width: 100%;" /></a></div>' + '<div class="col-xs-3">' +
-         '<a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 2 + '">' +
-         '<img src="images/m2.jpg" alt="Image" style="max-width: 100%;" /></a></div>' +
-         '<div class="col-xs-3"><a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 3 + '">' +
-         '<img src="images/m3.jpg" alt="Image" style="max-width: 100%;" /></a></div>' +
-         '<div class="col-xs-3">' +
-         '<a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 4 + '">' +
-         '<img src="images/m4.jpg" alt="Image" style="max-width: 100%;" /></a></div></div></div>' +
-         '<div class="item"><div class="row-fluid"><div class="col-xs-3">' +
-         '<a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 5 + '">' +
-         '<img src="images/m1.jpg" alt="Image" style="max-width: 100%;" /></a></div>' +
-         '<div class="col-xs-3"><a data-toggle="modal" data-target="#popupplayvideo" href="#" class="select-thumbnail-link" id="thumbvideo_' + 6 + '">' +
-         '<img src="images/m2.jpg" alt="Image" style="max-width: 100%;" /></a></div></div></div>';
-
+    var selectMovie = "";
+    for(var i=0;i<content.movies.length;i++){
+        selectMovie = selectMovie +  '<div class="card z-depth-2"> <div class="card-image"> <img src="' + content.movies[i].pic + '" onerror="this.src=\'images/movie.jpg\'" />' +
+            '<span class="card-title">' + content.movies[i].name +'</span> </div><div class="card-action white-text woobus">' +
+            '<a href="#" class="white-text select-thumbnail-link" data-val="' + content.movies[i].path + '" data-name="' + content.movies[i].name +
+            '"><i class="material-icons md-18 prefix">play_circle_filled</i> Play Movie</a></div></div>'
+    }
     $("#dvMovieList").append(selectMovie);
 }
 
 $(document).on('click', '.select-thumbnail-link', function () {
-    aud.pause();
-    var videoid = this.id;
-    videoid = videoid.replace('thumbvideo_', '');
-    PlayVideo(videoid);
+    //var videoid = this.id;
+    //videoid = videoid.replace('thumbvideo_', '');
+
+    PlayVideo([this.getAttribute("data-val"), this.getAttribute("data-name")]);
 });
 
-function PlayVideo(videoId) {
+function PlayVideo(path) {
 
-    var videoFile = 'http://html5videoformatconverter.com/data/images/happyfit2.mp4';  // videoId;
+    var videoFile =_localNginxUrl + path[0];
+    var videoName = path[1];
+    sessionStorage.videoUrl = videoFile;
+    sessionStorage.videoName = videoName;
+    //
+    //$("#btnPlayVideo").attr({
+    //    "src": videoFile,
+    //    "autoplay": true,
+    //    "height": "200px"
+    //});
+    //var elem = $("#btnPlayVideo");
+    //if (elem.requestFullscreen) {
+    //    elem.requestFullscreen();
+    //} else if (elem.mozRequestFullScreen) {
+    //    elem.mozRequestFullScreen();
+    //} else if (elem.webkitRequestFullscreen) {
+    //    elem.webkitRequestFullscreen();
+    //}
 
-    $("#dvVideo video").attr({
-        "src": videoFile,
-        "autoplay": false,
-        "height": "200px"
-    })
+    $(location).attr('href','player.html');
+
+    //screen.lockOrientation('landscape');
+    //so.setOrientation(so.Orientation.LANDSCAPE);
+    //VideoPlayer.play(
+    //    videoFile,
+    //    {
+    //        volume: 0.5,
+    //        scalingMode: VideoPlayer.SCALING_MODE.SCALE_TO_FIT
+    //    },
+    //    function () {
+    //        console.log("video completed");
+    //    },
+    //    function (err) {
+    //        console.log(err);
+    //    }
+    //);
 }
 
 function EntertainmentDetails() {
@@ -72,7 +90,7 @@ function EntertainmentDetails() {
     //};
     $.ajax({
         method: 'GET',
-        url: _apiBaseUrl + '/box/media?bus_identifier=1',
+        url: _apiBaseUrl + '/content',
         //data: journeyData,
         dataType: "json",
         success: dataParserEntertainmentDetails,
@@ -81,9 +99,21 @@ function EntertainmentDetails() {
 
     function dataParserEntertainmentDetails(data) {
         if (data != null || data != undefined) {
-            $.each(data, function (i, item) {
-                alert("rh");
-            });
+            var songs=[];
+            var movies=[];
+            var ebooks=[];
+            for(var i=0;i<data.length;i++){
+                console.log(data[i]);
+                if(data[i].content_type=="movie"){
+                    movies.push(data[i]);
+                }else if(data[i].content_type=="song"){
+                    songs.push(data[i]);
+                }else{
+                    ebooks.push(data[i]);
+                }
+            }
+            var content={movies:movies,songs:songs,ebooks:ebooks};
+            GetAllVideo(content);
         }
     }
 }
@@ -117,7 +147,7 @@ var playlist = [
     }
 ];
 
-//Scott Andrew’s HTML5 audio player
+//Scott Andrewï¿½s HTML5 audio player
 var aud = $('#jukebox .aud').get(0);
 var vid = $("#dvVideo video").get(0);
 aud.pos = -1;
