@@ -123,7 +123,7 @@ input[type]:focus:not([readonly]), textarea.materialize-textarea:focus:not([read
 }
 
 textarea {
-    max-height: 75%;
+    max-height: 200px;
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -146,7 +146,7 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 }
 
 #journey-box {
-    padding: 12px;
+    padding: 4%;
     margin: 20px 0;
 }
 
@@ -155,27 +155,29 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
     margin: 0;
 }
 
+#marker {
+position: relative;
+left: 0%;
+}
+
+#stops {
+margin-bottom: -20px;
+}
+
+#arrow {
+margin-top: -10px;
+margin-left: -10px;
+}
+
 .strip li {
     display: inline-block;
     width: 7%;
     height: auto;
-
-}
-
-#marker {
-    position: relative;
-    left: 5%;
-}
-
-#arrow {
-    margin-top: -10px;
-    margin-left: -10px;
 }
 
 .strip li:not(#arrow) {
-    display: inline-block;
     margin: 10px 0;
-    width: 7%;
+    width: 8%;
     height: 3px;
     background: #FFF none repeat scroll 0% 0%;
 }
@@ -256,5 +258,5 @@ hr {
     line-height:32px;
     font-size:2.5em;
     cursor: pointer;
-    margin: 20px 0;
+    margin-bottom:5px;
 }

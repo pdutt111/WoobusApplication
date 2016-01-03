@@ -35,9 +35,9 @@ function dataParserRoute(data) {
     $("#distance").html(data.current_distance+" Kms");
     console.log(data.distance);
 
-    var position_marker=((data.distance-data.current_distance)/data.distance)*78;//78 is because of the margins and so that it stays in the bounds needs to be sorted
+    var position_marker=((data.distance-data.current_distance)/data.distance)*87;//87 is because of the margins and so that it stays in the bounds needs to be sorted
 
-    $("#marker").css({'left':position_marker + 5 + '%'});
+    $("#marker").css({'left':position_marker + '%'});
 
     console.log(data.current_time_taken);
     var time_taken = (data.current_time_taken/(1000*60*60)).toFixed(2)+" Hrs";

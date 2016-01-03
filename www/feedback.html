@@ -42,36 +42,112 @@
     </header>
     <main>
         <div class="container">
+            <!-- Space -->
+            <h6>&nbsp;</h6>
+            <!-- Ratings -->
             <div class="row">
-                <form class="col s12">
-                    <!-- Rating -->
-                    <div class="row card">
-                        <div class="col s12">
-                            <div class="star-rating">
-                                <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
-                                <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
-                                <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
-                                <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
-                                <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
-                                <input type="hidden" name="rating" id="rating" class="rating-value" value="0">
-                            </div>
-                        </div>
+                <div class="col s12">
+                    <h6 class="woobus-text">1) How was the staff?</h6>
+                    <div class="star-rating 1 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="staff_rating" class="rating-value" value="0">
                     </div>
-                    <!-- Form -->
-                    <div class="row card">
-                        <div class="input-field col s12">
-                            <textarea id="txtFeedback" class="materialize-textarea" style="min-height: 150px;"></textarea>
-                            <label for="txtFeedback">Feedback</label>
-                        </div>
-                    </div>
-                </form>
-                <!-- Space -->
-                <span class="row"></span>
-                <div class="row center">
-                    <button id="btnFeedback" class="btn-large waves-effect waves-light woobus" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
-                    </button>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">2) How were the snacks?</h6>
+                    <div class="star-rating 2 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="snacks_rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">3) Cleanliness of the bus:</h6>
+                    <div class="star-rating 3 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="cleanliness_rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">4) How was the in-app experience?</h6>
+                    <div class="star-rating 4 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="app_rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">5) How was the bus tracking facility?</h6>
+                    <div class="star-rating 5 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="tracking_rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">6) The punctuality of the bus:</h6>
+                    <div class="star-rating 6 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="punctuality_rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <h6 class="woobus-text">7) Please rate your overall experience:</h6>
+                    <div class="star-rating 7 left">
+                        <i class="material-icons woobus-text md-36" data-rating="1">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="2">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="3">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="4">star_border</i>
+                        <i class="material-icons woobus-text md-36" data-rating="5">star_border</i>
+                        <input type="hidden" name="rating" id="rating" class="rating-value" value="0">
+                    </div>
+                </div>
+            </div>
+            <!-- Suggestions -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="txtFeedback" class="materialize-textarea" style="min-height: 75px;"></textarea>
+                    <label for="txtFeedback">8) Any other suggestions?</label>
+                </div>
+            </div>
+            </form>
+            <div class="row center">
+                <button id="btnFeedback" class="btn-large waves-effect waves-light woobus" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
             </div>
         </div>
     </main>
