@@ -1,14 +1,16 @@
 /**
  * Created by rohit on 29/12/15.
  */
-var $star_rating = $('.star-rating .fa');
+var $star_rating = $('.star-rating i');
 
 var SetRatingStar = function() {
     return $star_rating.each(function() {
         if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
-            return $(this).removeClass('fa-star-o').addClass('fa-star');
+            $(this).html("")
+            return $(this).append('star');
         } else {
-            return $(this).removeClass('fa-star').addClass('fa-star-o');
+            $(this).html("")
+            return $(this).append('star_border');
         }
     });
 };
