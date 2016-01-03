@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>WOOBUS</title>
+
+    <!-- theme CSS -->
+    <link rel="stylesheet" type="text/css" href="Materialize/font/material%20icons/material-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="Materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="Materialize/css/edits.css" />
+    <script src="cordova.js"></script>
+</head>
+<body class="bg woobus">
+    <div id="portrait">
+        <header>
+        <nav class="red woobus">
+            <div class="left" id="nav-back">
+                <a href="entertainment.html"><i class="material-icons white-text">chevron_left</i> </a>
+            </div>
+            <div class="brand-logo center">Movie</div>
+        </nav>
+        <!-- Menu - does not work
+        <div class="container">
+            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+                <i class="mdi-navigation-menu"></i>
+            </a>
+        </div>
+        <ul id="nav-mobile" class="side-nav fixed" style="width: 240px;">
+            <li>
+                <div id="logo-container" class="brand-logo valign-wrapper">
+                    <img src="images/logo.png" style="height: 50px;padding-top: 10px; color: red">
+                </div>
+            </li>
+            <li class="bold"><a href="makeabooking.html" class="waves-effect waves-red">Bookings</a></li>
+            <li class="bold"><a href="profile.html" class="waves-effect waves-red">Profile</a></li>
+            <li class="bold"><a href="entertainment.html" class="waves-effect waves-red">Entertainment</a></li>
+            <li class="bold"><a href="myjourney.html" class="waves-effect waves-red">My Journey</a></li>
+            <li class="bold"><a href="help.html" class="waves-effect waves-teal">Help</a></li>
+        </ul>
+        -->
+    </header>
+        <div class="row">
+            <h4 class="header woobus-text" id="movie-name">Movie</h4>
+        </div>
+    </div>
+    <main>
+        <div class="video-container container">
+            <video class="responsive-video" controls="controls" id="btnPlayVideo">
+                <source type="video/mp4" id="vid" />
+            </video>
+        </div>
+    </main>
+
+    <!-- Script files -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/stellar.js"></script>
+
+    <!-- Materialize Js -->
+    <script type="text/javascript" src="Materialize/js/materialize.js"></script>
+
+    <!-- Player javascript -->
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady()
+        {
+//          var so = cordova.plugins.screenorientation;
+//          so.setOrientation(so.Orientation.LANDSCAPE);
+            screen.unlockOrientation();
+        }
+        $(document).ready(function () {
+            jQuery(document).on('webkitfullscreenchange', function(e) {
+                if(!e.currentTarget.webkitIsFullScreen) {
+                    screen.unlockOrientation();
+                }
+            });
+            $("#btnPlayVideo").attr({
+                "src": sessionStorage.videoUrl,
+                "autoplay": true
+            });
+            $("#btnPlayVideo").ready(function(){
+//              this.enterFullScreen(); // enter full screen by default -stooch
+//                this.play(); // force autoplay -stooch
+                var elem = this;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) {
+                    elem.webkitRequestFullscreen();
+                }
+            });
+            $("#movie-name").html("");
+            $("#movie-name").append(sessionStorage.videoName);
+        });
+    </script>
+
+</body>
+</html>
