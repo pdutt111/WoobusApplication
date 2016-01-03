@@ -1,21 +1,4 @@
 {
-    "org.apache.cordova.wifiinfo": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/dippi/org.apache.cordova.wifiinfo",
-            "subdir": "."
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-whitelist": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-whitelist"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-screen-orientation": {
         "source": {
             "type": "registry",
@@ -24,10 +7,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "com.moust.cordova.videoplayer": {
+    "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
-            "id": "com.moust.cordova.videoplayer"
+            "id": "cordova-plugin-whitelist"
         },
         "is_top_level": true,
         "variables": {}
