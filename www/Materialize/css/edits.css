@@ -162,6 +162,11 @@ textarea.materialize-textarea:focus:not([readonly]) + label {
 
 }
 
+#marker {
+    position: relative;
+    left: 5%;
+}
+
 #arrow {
     margin-top: -10px;
     margin-left: -10px;

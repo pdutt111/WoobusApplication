@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7d502c26-4cba-4d32-a8ef-4f0ccf3f5a2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myjourney.html" afterPath="$PROJECT_DIR$/myjourney.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/Materialize/css/edits.css" afterPath="$PROJECT_DIR$/www/Materialize/css/edits.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/custom-journey.js" afterPath="$PROJECT_DIR$/www/js/custom-journey.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/myjourney.html" afterPath="$PROJECT_DIR$/www/myjourney.html" />
     </list>
@@ -29,38 +29,18 @@
       <file leaf-file-name="myjourney.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/myjourney.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.037037">
-              <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myjourney.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myjourney.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55791193">
-              <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edits.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/Materialize/css/edits.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom-journey.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom-journey.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/custom-journey.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="130" selection-start-line="49" selection-start-column="130" selection-end-line="49" selection-end-column="130" />
+            <state vertical-scroll-proportion="0.73125">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -70,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/www/feedback.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,10 +95,10 @@
         <option value="$PROJECT_DIR$/Materialize/css/edits.css" />
         <option value="$PROJECT_DIR$/feedback.html" />
         <option value="$PROJECT_DIR$/js/rating.js" />
+        <option value="$PROJECT_DIR$/myjourney.html" />
+        <option value="$PROJECT_DIR$/www/myjourney.html" />
         <option value="$PROJECT_DIR$/www/Materialize/css/edits.css" />
         <option value="$PROJECT_DIR$/www/js/custom-journey.js" />
-        <option value="$PROJECT_DIR$/www/myjourney.html" />
-        <option value="$PROJECT_DIR$/myjourney.html" />
       </list>
     </option>
   </component>
@@ -600,50 +580,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/feedback.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.87628865">
-          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/Materialize/css/edits.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="163" column="0" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/myjourney.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.037037">
-          <caret line="153" column="35" selection-start-line="153" selection-start-column="35" selection-end-line="153" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/js/custom-journey.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="130" selection-start-line="49" selection-start-column="130" selection-end-line="49" selection-end-column="130" />
+        <state vertical-scroll-proportion="2.055465">
+          <caret line="73" column="46" selection-start-line="73" selection-start-column="46" selection-end-line="73" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myjourney.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55791193">
+        <state vertical-scroll-proportion="-52.666668">
           <caret line="127" column="60" selection-start-line="127" selection-start-column="60" selection-end-line="127" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/feedback.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/Materialize/css/edits.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5285481">
+          <caret line="166" column="11" selection-start-line="166" selection-start-column="11" selection-end-line="166" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/myjourney.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/js/custom-journey.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73125">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
