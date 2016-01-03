@@ -28,16 +28,10 @@
         }
     },
     "installed_plugins": {
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.woobus.app"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.woobus.app"
-        },
         "cordova-plugin-screen-orientation": {
             "PACKAGE_NAME": "com.woobus.app"
         },
-        "com.moust.cordova.videoplayer": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.woobus.app"
         }
     },
