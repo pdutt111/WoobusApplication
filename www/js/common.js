@@ -292,51 +292,57 @@ function onDeviceReady()
 //        var so = cordova.plugins.screenorientation;
 //        so.setOrientation(so.Orientation.LANDSCAPE);
     screen.lockOrientation('portrait');
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(pos){
-            console.log(pos);
-            $.ajax({
-                type: 'POST',
-                url: _apiBaseUrl+'/route/location',
-                data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy},
-                contentType: 'application/x-www-form-urlencoded',
-                success: function(info){
-                    console.log(info);
-                },
-                error: function(err){
-                    //alert(JSON.stringify(err));
-                }
-            });
-        },function(err){
-            console.log(err);
-        },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: false });
-    } else {
-        console.log("Geolocation is not supported by this browser.");
-    }
+    var locationInterval;
+    if(!locationInterval){
+        locationInterval=setInterval(function(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(pos){
+                    console.log(pos);
+                    $.ajax({
+                        type: 'POST',
+                        url: _apiBaseUrl+'/route/location',
+                        data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy,speed:0,track:0},
+                        contentType: 'application/x-www-form-urlencoded',
+                        success: function(info){
+                            console.log(info);
+                        },
+                        error: function(err){
+                            //alert(JSON.stringify(err));
+                        }
+                    });
+                },function(err){
+                    console.log(err);
+                },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: true });
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
 
+        },60*1000);
+
+    }
 }
 //for testing on browser
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(pos){
-        console.log(pos);
-        $.ajax({
-            type: 'POST',
-            url: _apiBaseUrl+'/route/location',
-            data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy,speed:0,heading:0},
-            contentType: 'application/x-www-form-urlencoded',
-            success: function(info){
-                console.log(info);
-            },
-            error: function(err){
-                //alert(JSON.stringify(err));
-            }
-        });
-    },function(err){
-        console.log(err);
-    },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: false });
-} else {
-    console.log("Geolocation is not supported by this browser.");
-}
+//if (navigator.geolocation) {
+//    navigator.geolocation.getCurrentPosition(function(pos){
+//        console.log(pos);
+//        $.ajax({
+//            type: 'POST',
+//            url: _apiBaseUrl+'/route/location',
+//            data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy,speed:0,heading:0},
+//            contentType: 'application/x-www-form-urlencoded',
+//            success: function(info){
+//                console.log(info);
+//            },
+//            error: function(err){
+//                //alert(JSON.stringify(err));
+//            }
+//        });
+//    },function(err){
+//        console.log(err);
+//    },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: false });
+//} else {
+//    console.log("Geolocation is not supported by this browser.");
+//}
 
 
 
