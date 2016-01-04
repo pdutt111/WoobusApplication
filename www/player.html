@@ -69,6 +69,10 @@
 //          var so = cordova.plugins.screenorientation;
 //          so.setOrientation(so.Orientation.LANDSCAPE);
             screen.unlockOrientation();
+            document.addEventListener("backbutton", function() {
+                //navigator.app.exitApp();
+                $(location).attr('href','entertainment.html');
+            }, false);
         }
         $(document).ready(function () {
             jQuery(document).on('webkitfullscreenchange', function(e) {

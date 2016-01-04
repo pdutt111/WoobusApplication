@@ -72,5 +72,15 @@
     <script src="js/custom.js"></script>
     <script src="js/common.js"></script>
     <script src="js/custom-entertainment.js"></script>
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+        // PhoneGap loaded
+        function onDeviceReady() {
+            document.addEventListener("backbutton", function() {
+                //navigator.app.exitApp();
+                $(location).attr('href','myjourney.html');
+            }, false);
+        }
+    </script>
 </body>
 </html>
