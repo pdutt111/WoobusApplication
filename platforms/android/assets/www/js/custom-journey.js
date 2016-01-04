@@ -3,7 +3,7 @@ $(document).ready(function () {
     getRouteDetails();
     setInterval(function () {
         getRouteDetails();
-    }, 5*60*1000);
+    }, 10*1000);
 });
 
 function getRouteDetails() {
