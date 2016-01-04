@@ -7,10 +7,10 @@ var star_ratings = [$('.star-rating.1 i'), $('.star-rating.2 i'), $('.star-ratin
 var SetRatingStar = function($star_rating) {
     return $star_rating.each(function() {
         if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
-            $(this).html("")
+            $(this).html("");
             return $(this).append('star');
         } else {
-            $(this).html("")
+            $(this).html("");
             return $(this).append('star_border');
         }
     });
@@ -46,10 +46,11 @@ $("#btnFeedback").on('click',function(){
         success: function(info){
             Materialize.toast("Thank you! Your feedback is valuable to us.", 2000, 'rounded');
             $(location).attr('href','myjourney.html');
-
+            console.log(info);
         },
         error: function(err){
             //alert(JSON.stringify(err));
+            console.log(err);
         }
     });
 });
