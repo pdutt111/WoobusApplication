@@ -33,6 +33,15 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.woobus.app"
+        },
+        "com.moust.cordova.videoplayer": {
+            "PACKAGE_NAME": "com.woobus.app"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.woobus.app"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.woobus.app"
         }
     },
     "dependent_plugins": {}

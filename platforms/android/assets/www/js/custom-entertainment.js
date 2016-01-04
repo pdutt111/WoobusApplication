@@ -29,10 +29,17 @@ function GetAllVideo(content) {
     $("#dvMovieList").html("");
     var selectMovie = "";
     for(var i=0;i<content.movies.length;i++){
-        selectMovie = selectMovie +  '<div class="card z-depth-2"> <div class="card-image"> <img src="' + content.movies[i].pic + '" onerror="this.src=\'images/movie.jpg\'" />' +
-            '<span class="card-title">' + content.movies[i].name +'</span> </div><div class="card-action white-text woobus">' +
-            '<a href="#" class="white-text select-thumbnail-link" data-val="' + content.movies[i].path + '" data-name="' + content.movies[i].name +
-            '"><i class="material-icons md-18 prefix">play_circle_filled</i> Play Movie</a></div></div>'
+        selectMovie = selectMovie +  '<div class="card z-depth-2"> ' +
+        '<div class="card-image">' +
+            '<a href="#" class="white-text select-thumbnail-link" data-val="' + content.movies[i].path + '" data-name="' + content.movies[i].name +'">'+
+        ' <img src="' + content.movies[i].pic + '" onerror="this.src=\'images/movie.jpg\'" />' +
+            '<span class="card-title">' + content.movies[i].name +'</span>' +
+        ' </div>' +
+        '<div class="card-action white-text woobus">' +
+            '<i class="material-icons md-18 prefix">play_circle_filled</i> Play Movie' +
+        '</div>' +
+        '</a>' +
+        '</div>'
     }
     $("#dvMovieList").append(selectMovie);
 }

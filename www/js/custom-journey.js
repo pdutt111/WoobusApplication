@@ -83,3 +83,15 @@ $("#btnStop").click(function () {
 $("#btnAccessories").click(function () {
 
 });
+//document.addEventListener("deviceready", onDeviceReady, false);
+//function onDeviceReady()
+//{
+//
+//    console.log("device ready "+navigator.geolocation);
+//    navigator.geolocation.getCurrentPosition(function(position){
+//        console.log(position);
+//    },
+//    function(err){
+//
+//    },{ enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0 });
+//}

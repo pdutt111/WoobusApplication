@@ -2,7 +2,7 @@
 var adminEmail = 'rashmi.srivastava@vibetechindia.com';
 var _webSiteName = "WooBus";
 var _apiBaseUrl = "http://dev.cachefi.com/api/v1";
-var _localUrl= "http://192.168.1.105/api/v1"
+var _localUrl= "http://192.168.1.4:1337/api/v1"
 //var _localUrl= "http://localhost:1337/api/v1";
 //var _localNginxUrl= "http://localhost:2000/";
 var _localNginxUrl= "http://192.168.1.105:2000"
@@ -292,7 +292,50 @@ function onDeviceReady()
 //        var so = cordova.plugins.screenorientation;
 //        so.setOrientation(so.Orientation.LANDSCAPE);
     screen.lockOrientation('portrait');
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(pos){
+            console.log(pos);
+            $.ajax({
+                type: 'POST',
+                url: _apiBaseUrl+'/route/location',
+                data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy},
+                contentType: 'application/x-www-form-urlencoded',
+                success: function(info){
+                    console.log(info);
+                },
+                error: function(err){
+                    //alert(JSON.stringify(err));
+                }
+            });
+        },function(err){
+            console.log(err);
+        },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: false });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
 
+}
+//for testing on browser
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(pos){
+        console.log(pos);
+        $.ajax({
+            type: 'POST',
+            url: _apiBaseUrl+'/route/location',
+            data: {lat:pos.coords.latitude,lon:pos.coords.longitude,accuracy:pos.coords.accuracy,speed:0,heading:0},
+            contentType: 'application/x-www-form-urlencoded',
+            success: function(info){
+                console.log(info);
+            },
+            error: function(err){
+                //alert(JSON.stringify(err));
+            }
+        });
+    },function(err){
+        console.log(err);
+    },{ maximumAge: 3000, timeout: 20000, enableHighAccuracy: false });
+} else {
+    console.log("Geolocation is not supported by this browser.");
 }
 
 

@@ -32,9 +32,8 @@
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />
     <gap:plugin name="org.apache.cordova.inappbrowser" version="0.3.3" />
-    <gap:plugin name="org.apache.cordova.media" />
+    <!--<gap:plugin name="org.apache.cordova.media" />-->
     <gap:plugin name="cordova-plugin-screen-orientation" source="npm" version="1.4.0" />
-    <gap:plugin name="org.apache.cordova.cordova-plugin-network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
 
@@ -72,7 +71,7 @@
     <feature name="http://api.phonegap.com/1.0/geolocation"/>
 
     <gap:splash src="splash.png" />
-    <icon src="www/icon.png" />
+    <icon src="www/images/logo.png" />
 
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
@@ -108,6 +107,9 @@
         <!-- images are determined by width and height. The following are supported -->
         <splash src="res/screen/windows-phone/splash-620.png" width="620" height="300"/>
     </platform>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+    </feature>
     <content src="index.html" />
     <allow-navigation href="http://*/*" />
     <access origin="*"/>

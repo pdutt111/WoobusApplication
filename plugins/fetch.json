@@ -14,5 +14,29 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.moust.cordova.videoplayer": {
+        "source": {
+            "type": "registry",
+            "id": "com.moust.cordova.videoplayer"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-network-information"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-geolocation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
