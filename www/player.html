@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <!-- Let browser know website is optimized for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>WOOBUS</title>
+    <title>Movie - </title>
 
     <!-- theme CSS -->
     <link rel="stylesheet" type="text/css" href="Materialize/font/material%20icons/material-icons.css"/>
@@ -59,7 +59,7 @@
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 
     <!-- Materialize Js -->
-    <script type="text/javascript" src="Materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="Materialize/js/materialize.min.js"></script>
 
     <!-- Player javascript -->
     <script>
@@ -98,7 +98,9 @@
             });
             $("#movie-name").html("");
             $("#movie-name").append(sessionStorage.videoName);
+            $('title').append(sessionStorage.videoName);
         });
+        window.analytics.trackView(sessionStorage.videoName);
     </script>
 
 </body>

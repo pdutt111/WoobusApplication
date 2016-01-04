@@ -7,3 +7,5 @@ hooks
 plugins
 platforms
 .idea
+/*.keystore
+/*.apk

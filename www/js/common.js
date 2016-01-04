@@ -69,6 +69,8 @@ $(document).ready(function () {
 // device ready
 function onDeviceReady() {
     _platform = device.platform;
+    window.analytics.startTrackerWithId('UA-71858665-2')
+    window.analytics.setUserId('device.uuid')
 }
 
 // common click events
