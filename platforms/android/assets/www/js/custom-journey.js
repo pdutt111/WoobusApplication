@@ -1,3 +1,4 @@
+var dialogopen=false;
 $(document).ready(function () {
     console.log("running");
     getRouteDetails();
@@ -95,3 +96,21 @@ $("#btnAccessories").click(function () {
 //
 //    },{ enableHighAccuracy: true, timeout: 2*1000, maximumAge: 0 });
 //}
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady()
+{
+//          var so = cordova.plugins.screenorientation;
+//          so.setOrientation(so.Orientation.LANDSCAPE);
+    document.addEventListener("backbutton", function() {
+        if(!dialogopen){
+            navigator.app.exitApp();
+        }else{
+            $("#modal1").closeModal();
+            dialogopen=false;
+        }
+        //$(location).attr('href','entertainment.html');
+    }, false);
+}
+function overrideback(){
+    dialogopen=true;
+}

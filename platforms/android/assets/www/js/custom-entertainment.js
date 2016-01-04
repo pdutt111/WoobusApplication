@@ -233,7 +233,6 @@ aud.addEventListener('ended', function (evt) {
 
 $('#jukebox .info').html(playlist[0].title);
 
-
 /**
 * END
  */

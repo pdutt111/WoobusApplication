@@ -120,3 +120,13 @@ $(document).ready(function () {
     }
 });
 
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady()
+{
+//          var so = cordova.plugins.screenorientation;
+//          so.setOrientation(so.Orientation.LANDSCAPE);
+    document.addEventListener("backbutton", function() {
+        navigator.app.exitApp();
+        //$(location).attr('href','entertainment.html');
+    }, false);
+}
