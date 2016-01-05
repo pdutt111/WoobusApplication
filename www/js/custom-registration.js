@@ -27,8 +27,8 @@ function RegisterUser() {
     console.log("registering users");
     //alert(_apiBaseUrl);
     var userData = {
-        //email: $("#txtEmail").val().trim(),
-        //name: $("#txtUserName").val().trim(),
+        email: $("#txtEmail").val().trim(),
+        name: $("#txtUserName").val().trim(),
         phonenumber: $("#txtPhoneNumber").val().trim()
     };
            //alert(_apiBaseUrl+'/users/create');
