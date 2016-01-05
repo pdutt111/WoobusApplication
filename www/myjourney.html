@@ -101,7 +101,7 @@
                 </div> </a>
             </div>
             <div class="col s4 promo-journey" onclick="overrideback();">
-                <a class="modal-trigger" href="#modal1" data-target="modal1" onclick="window.analytics.trackEvent('Dialogs', 'Amenities')"> <div class="center promo">
+                <a class="modal-trigger" href="#modal1" data-target="modal1"> <div class="center promo">
                     <i class="material-icons woobus-text md-48">work</i>
                     <p class="promo-caption woobus-text">Amenities</p>
                 </div> </a>
@@ -189,7 +189,6 @@
 
     <!-- Custom js files -->
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-    <script src="js/custom.js"></script>
     <script src="js/common.js"></script>
     <script src="js/custom-journey.js"></script>
     <script>
@@ -197,8 +196,7 @@
         $(document).ready(function(){
             $('.modal-trigger').leanModal();
         });
-        window.analytics.trackView('My Journey')
+        //window.analytics.trackView('My Journey')
     </script>
-
 </body>
 </html>

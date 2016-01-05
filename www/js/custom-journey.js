@@ -42,7 +42,7 @@ function dataParserRoute(data) {
 
     console.log(data.current_time_taken);
     var minutes=(data.current_time_taken/(1000*60)).toFixed(0);
-    var time_taken = Math.floor(minutes/60)+"."+(minutes%60)+" Hrs";
+    var time_taken = Math.floor(minutes/60)+":"+(minutes%60)+" Hrs";
     $("#time").html(time_taken);
 
     console.log(journeyData);

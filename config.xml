@@ -5,10 +5,9 @@
         id        = "com.woobus.app"
         version   = "1.0">
 
-    <name>Woo Bus</name>
+    <name>WOOBUS</name>
     <description>
-        Woo Bus App
-
+        WOOBUS App
     </description>
     <author href="http://woobus.in" email="parikshit@woobus.in">
         Vibetech India

@@ -69,8 +69,8 @@ $(document).ready(function () {
 // device ready
 function onDeviceReady() {
     _platform = device.platform;
-    window.analytics.startTrackerWithId('UA-71858665-2')
-    window.analytics.setUserId('device.uuid')
+    //window.analytics.startTrackerWithId('UA-71858665-2')
+    //window.analytics.setUserId('device.uuid')
 }
 
 // common click events
@@ -345,6 +345,3 @@ function onDeviceReady()
 //} else {
 //    console.log("Geolocation is not supported by this browser.");
 //}
-
-
-
